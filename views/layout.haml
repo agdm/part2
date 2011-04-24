@@ -1,0 +1,19 @@
+!!!
+%html
+	%head
+		%title <%= @title + ' | Recall' %>
+		%link(href="reset.css")
+		%link(href="syle.css")
+	%body
+		%header
+			%hgroup
+				%h1
+					%a(href="/") Recall
+				%h2
+					'cause you're too busy to remember
+		%div#main
+			<%= yield %>
+		%footer
+			%p
+				%small
+					An app for %a(href="http://net.tutsplus.com") Nettuts+
