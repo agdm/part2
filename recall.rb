@@ -12,6 +12,15 @@ class Note
   property :updated_at, DateTime
 end
 
+class User
+  include DataMapper::Resource
+  property :id, Serial
+  property :email, String, :required => true
+  property :password, String, :required => true
+  property :creatd_at, DateTime
+  property :updated_at, DateTime
+end
+
 DataMapper.finalize.auto_upgrade!
 
 get '/' do
